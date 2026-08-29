@@ -1,0 +1,777 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap");
+
+:root {
+  --asphalt: #17181a;
+  --asphalt-light: #232427;
+  --asphalt-lighter: #2b2c30;
+  --steel: #5c6169;
+  --ember: #d1361f;
+  --ember-dark: #a3280f;
+  --amber: #f2a71b;
+  --off-white: #eeeff1;
+  --text-muted: #9a9ea5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--asphalt);
+  font-family: "Barlow Condensed", sans-serif;
+  color: var(--off-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background-color: var(--asphalt) !important;
+  border-bottom: 3px solid var(--ember);
+  padding: 14px 0;
+}
+
+.brand-mark {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+  color: var(--off-white);
+}
+
+.brand-mark span {
+  color: var(--ember);
+}
+
+.navbar-toggler {
+  border-color: var(--steel);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.nav-link {
+  color: var(--off-white) !important;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-left: 24px;
+  padding-bottom: 4px !important;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--amber) !important;
+  border-bottom: 2px solid var(--amber);
+}
+
+.nav-cta {
+  background-color: var(--ember);
+  color: var(--off-white) !important;
+  padding: 8px 20px !important;
+  border-radius: 3px;
+  margin-left: 24px;
+}
+
+.nav-cta:hover {
+  background-color: var(--ember-dark);
+  color: var(--off-white) !important;
+  border-bottom: none;
+}
+
+/* ---------- Buttons ---------- */
+.custom-button {
+  color: var(--asphalt);
+  background-color: var(--ember);
+  min-width: 170px;
+  height: 50px;
+  border-width: 0;
+  border-radius: 2px;
+  margin-right: 14px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transform: skewX(-8deg);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.custom-button span {
+  display: inline-block;
+  transform: skewX(8deg);
+}
+
+.custom-button:hover {
+  background-color: var(--ember-dark);
+  color: var(--asphalt);
+}
+
+.custom-outline-button {
+  color: var(--off-white);
+  background-color: transparent;
+  min-width: 170px;
+  height: 50px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--steel);
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transform: skewX(-8deg);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.custom-outline-button span {
+  display: inline-block;
+  transform: skewX(8deg);
+}
+
+.custom-outline-button:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+/* ---------- Hero ---------- */
+.banner-section-bg-container {
+  position: relative;
+  min-height: 92vh;
+  background-image:
+    linear-gradient(100deg, rgba(23,24,26,0.94) 30%, rgba(23,24,26,0.55) 65%, rgba(23,24,26,0.85) 100%),
+    url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.banner-section-bg-container::after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  bottom: 14%;
+  width: 55%;
+  height: 6px;
+  background: var(--ember);
+  transform: skewX(-25deg);
+  box-shadow: 0 0 24px 2px rgba(209, 54, 31, 0.6);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  padding-left: 8%;
+  max-width: 640px;
+}
+
+.banner-eyebrow {
+  color: var(--amber);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.banner-heading {
+  color: var(--off-white);
+  font-size: 72px;
+  line-height: 0.95;
+  margin-bottom: 22px;
+}
+
+.banner-heading em {
+  font-style: normal;
+  color: var(--ember);
+}
+
+.banner-caption {
+  color: #c7c9ce;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  max-width: 480px;
+}
+
+.hero-stats {
+  margin-top: 50px;
+}
+
+.hero-stat-num {
+  color: var(--amber);
+  font-size: 32px;
+}
+
+.hero-stat-label {
+  color: #c7c9ce;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ---------- Section headings ---------- */
+.section-eyebrow {
+  color: var(--amber);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.section-heading {
+  font-size: 42px;
+  color: var(--off-white);
+  margin-bottom: 16px;
+}
+
+.section-subtext {
+  color: var(--text-muted);
+  font-size: 17px;
+  font-weight: 500;
+  max-width: 560px;
+}
+
+/* ---------- Carousel ---------- */
+.carousel-section {
+  padding: 90px 0;
+  background-color: var(--asphalt-light);
+}
+
+.carousel-slide-img {
+  height: 460px;
+  object-fit: cover;
+  border-radius: 4px;
+  filter: brightness(0.55);
+}
+
+.carousel-caption-custom {
+  left: 8%;
+  right: 8%;
+  bottom: 40px;
+  text-align: left;
+}
+
+.carousel-caption-custom h5 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--off-white);
+}
+
+.carousel-caption-custom p {
+  font-size: 16px;
+  max-width: 480px;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #dcdee1;
+}
+
+/* ---------- Why ride with us ---------- */
+.why-section {
+  padding: 90px 0;
+}
+
+.why-card {
+  padding: 30px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #2c2d30;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  height: 100%;
+}
+
+.why-card:hover {
+  border-color: var(--ember);
+  transform: translateY(-4px);
+}
+
+.why-icon-wrap {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background-color: var(--asphalt-lighter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+}
+
+.why-icon-wrap svg {
+  width: 34px;
+  height: 34px;
+  stroke: var(--amber);
+}
+
+.why-card h4 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.why-card p {
+  color: var(--text-muted);
+  font-size: 15px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+/* ---------- Reviews ---------- */
+.reviews-section {
+  padding: 90px 0;
+  background-color: var(--asphalt-light);
+}
+
+.review-card {
+  background-color: var(--asphalt);
+  border: 1px solid #2c2d30;
+  border-radius: 4px;
+  padding: 30px;
+  height: 100%;
+}
+
+.review-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 14px;
+  filter: grayscale(30%);
+}
+
+.review-name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.review-tag {
+  color: var(--ember);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.review-text {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-top: 16px;
+}
+
+/* ---------- Explore bikes ---------- */
+.fleet-section {
+  padding: 90px 0;
+}
+
+.bike-category-card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 220px;
+  margin-bottom: 30px;
+  display: block;
+  border: 1px solid #2c2d30;
+}
+
+.bike-category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.bike-category-card:hover img {
+  transform: scale(1.08);
+}
+
+.bike-category-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 18px;
+}
+
+.bike-category-overlay h5 {
+  color: var(--off-white);
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.bike-category-overlay span {
+  color: var(--amber);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+/* ---------- Test rides & financing ---------- */
+.financing-section {
+  padding: 90px 0;
+  background-color: #0f1011;
+}
+
+.financing-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.financing-badge {
+  background-color: var(--asphalt-lighter);
+  border: 1px solid #34363a;
+  color: var(--off-white);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  padding: 10px 16px;
+  border-radius: 3px;
+}
+
+.financing-img {
+  width: 100%;
+  border-radius: 4px;
+  height: 340px;
+  object-fit: cover;
+  filter: saturate(1.1);
+}
+
+/* ---------- Follow us / gallery ---------- */
+.follow-section {
+  padding: 90px 0;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 26px 0 50px;
+}
+
+.social-links a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid #34363a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--off-white);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.social-links a:hover {
+  background-color: var(--ember);
+  color: var(--off-white);
+  border-color: var(--ember);
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  filter: grayscale(35%);
+  transition: filter 0.2s ease;
+}
+
+.gallery-grid img:hover {
+  filter: grayscale(0%);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: #0f1011;
+  color: var(--text-muted);
+  padding: 40px 0;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #2c2d30;
+}
+
+.site-footer a {
+  color: var(--amber);
+}
+
+/* ---------- Category / item pages ---------- */
+.category-header {
+  padding: 60px 0 40px;
+  background-color: var(--asphalt-light);
+  border-bottom: 1px solid #2c2d30;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--off-white);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.back-link:hover {
+  color: var(--amber);
+}
+
+.item-grid {
+  padding: 50px 0 90px;
+}
+
+.item-card {
+  background-color: var(--asphalt-light);
+  border: 1px solid #2c2d30;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.item-card:hover {
+  border-color: var(--ember);
+  transform: translateY(-4px);
+}
+
+.item-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.item-card-body {
+  padding: 16px 18px 20px;
+}
+
+.item-card-body h6 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  margin: 0 0 4px;
+  letter-spacing: 0.5px;
+}
+
+.item-meta {
+  color: var(--text-muted);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.item-price {
+  color: var(--amber);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+/* ---------- Garage (cart) page ---------- */
+.garage-header {
+  padding: 50px 0 20px;
+}
+
+.garage-item {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  background-color: var(--asphalt-light);
+  border: 1px solid #2c2d30;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.garage-item img {
+  width: 130px;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.garage-item-info {
+  flex-grow: 1;
+}
+
+.garage-item-info h6 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.badge-featured {
+  background-color: rgba(242, 167, 27, 0.15);
+  color: var(--amber);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  margin-right: 6px;
+}
+
+.badge-available {
+  background-color: rgba(46, 160, 67, 0.15);
+  color: #4caf50;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
+.badge-sold {
+  background-color: rgba(209, 54, 31, 0.15);
+  color: var(--ember);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
+.garage-item-meta {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin: 6px 0;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.garage-item-price {
+  color: var(--off-white);
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: right;
+}
+
+.mini-button {
+  min-width: 130px;
+  height: 40px;
+  font-size: 13px;
+}
+
+/* ---------- Auth pages ---------- */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--asphalt);
+  background-image: radial-gradient(circle at 20% 20%, rgba(209,54,31,0.08), transparent 40%);
+  padding: 40px 16px;
+}
+
+.auth-card {
+  background-color: var(--asphalt-light);
+  border: 1px solid #2c2d30;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 34px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.auth-card .brand-mark {
+  display: block;
+  margin-bottom: 22px;
+  font-size: 26px;
+}
+
+.auth-card h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: var(--off-white);
+}
+
+.auth-card .form-control {
+  height: 46px;
+  margin-bottom: 16px;
+  border-radius: 3px;
+  background-color: var(--asphalt);
+  border: 1px solid #34363a;
+  color: var(--off-white);
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.auth-card .form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.auth-card .form-control:focus {
+  background-color: var(--asphalt);
+  color: var(--off-white);
+  border-color: var(--ember);
+  box-shadow: none;
+}
+
+.auth-card .custom-button {
+  width: 100%;
+  margin: 10px 0 18px;
+  transform: none;
+}
+
+.auth-card .custom-button span {
+  transform: none;
+}
+
+.auth-switch {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767px) {
+  .banner-content {
+    padding-left: 6%;
+    padding-right: 6%;
+    max-width: 100%;
+  }
+  .banner-heading {
+    font-size: 46px;
+  }
+  .banner-caption {
+    font-size: 17px;
+  }
+  .section-heading {
+    font-size: 30px;
+  }
+  .carousel-slide-img {
+    height: 320px;
+  }
+  .custom-button,
+  .custom-outline-button {
+    min-width: 145px;
+    height: 46px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .banner-heading {
+    font-size: 38px;
+  }
+  .custom-button {
+    margin-bottom: 12px;
+  }
+}
